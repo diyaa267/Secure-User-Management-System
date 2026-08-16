@@ -1,6 +1,6 @@
 # Secure User Management System
 
-Final internship project package containing a Flask REST API and React/Vite frontend.
+A secure user management system built with Flask REST API, React, JWT authentication, and MySQL.
 
 - Database: MySQL for deployment, SQLite fallback for local development
 - Authentication: JWT
