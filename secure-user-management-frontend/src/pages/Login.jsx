@@ -1,4 +1,3 @@
-```jsx
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../services/api";
@@ -28,6 +27,7 @@ export default function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     setMessage("");
     setLoading(true);
 
@@ -39,10 +39,7 @@ export default function Login() {
 
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
-      localStorage.setItem(
-        "role",
-        response.data.user.role || "user"
-      );
+      localStorage.setItem("role", response.data.user.role || "user");
 
       navigate("/dashboard");
     } catch (error) {
@@ -80,6 +77,7 @@ export default function Login() {
 
           <label className="auth-label">
             EMAIL ADDRESS
+
             <input
               type="email"
               placeholder="Enter your email"
@@ -92,6 +90,7 @@ export default function Login() {
 
           <label className="auth-label">
             PASSWORD
+
             <input
               type="password"
               placeholder="Enter your password"
@@ -127,4 +126,3 @@ export default function Login() {
     </div>
   );
 }
-```
