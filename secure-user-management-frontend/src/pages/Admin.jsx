@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+import "../styles/admin.css";
+export default function Admin(){return <div className="admin-page"><div className="admin-wrap"><header className="admin-head"><div><p>ADMINISTRATION</p><h1>Admin Panel</h1><p>Protected administrator area for the Secure User Management System.</p></div><div className="admin-actions"><Link to="/users">Manage Users</Link><Link to="/dashboard">Dashboard</Link></div></header><section className="admin-card"><h2>Administrator access granted</h2><p>You are authenticated with an administrator JWT role. From here you can review and manage registered accounts.</p><span className="admin-badge">JWT Admin Protected</span></section></div></div>}
